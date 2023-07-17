@@ -1,5 +1,7 @@
 # Projeto criando Api REST com Go usando o framework Gin
 
+[![wakatime](https://wakatime.com/badge/user/a98f0234-1d95-40bf-a1e4-76c757645f01/project/438db3f4-786d-435c-bb62-24241e5e087b.svg)](https://wakatime.com/badge/user/a98f0234-1d95-40bf-a1e4-76c757645f01/project/438db3f4-786d-435c-bb62-24241e5e087b)
+
 ## Sobre o projeto
 
 Projeto criado para estudo de Go e do framework Gin. O projeto consiste em uma API REST que faz o CRUD de usuários.
