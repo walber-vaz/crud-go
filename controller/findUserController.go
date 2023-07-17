@@ -2,6 +2,6 @@ package controller
 
 import "github.com/gin-gonic/gin"
 
-func GetUser(ctx *gin.Context) {}
+func FindUser(ctx *gin.Context) {}
 
-func GetAllUsers(ctx *gin.Context) {}
+func FindAllUsers(ctx *gin.Context) {}
