@@ -20,11 +20,11 @@ Projeto criado para estudo de Go e do framework Gin. O projeto consiste em uma A
 ## TODO
 
 - [x] Criar projeto
-- [ ] Criar estrutura de pastas
+- [x] Criar estrutura de pastas
 - [ ] Criar Dockerfile
 - [ ] Criar docker-compose
 - [ ] Criar conexão com o banco de dados
-- [ ] Criar CRUD de usuários
+- [x] Criar CRUD de usuários
 - [ ] Criar testes unitários
 - [ ] Criar testes de integração
 - [ ] Criar testes de aceitação
