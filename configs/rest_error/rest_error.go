@@ -14,6 +14,10 @@ type Error_type struct {
 	Message string `json:"message"`
 }
 
+// Error returns the error message of the RestError.
+//
+// This function does not take any parameters.
+// It returns a string, which is the error message of the RestError.
 func (e *RestError) Error() string {
 	return e.Message
 }
