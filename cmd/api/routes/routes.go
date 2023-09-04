@@ -6,10 +6,14 @@ import (
 )
 
 func InitRoutes(r *gin.RouterGroup) {
-	r.GET("/users", handler.GetUsers)
-	r.POST("/user", handler.CreateUser)
-	r.GET("/user/email/:email", handler.FindUserByEmail)
-	r.GET("/user/id/:id", handler.FindUserById)
-	r.PATCH("/user/:id", handler.UpdateUser)
-	r.DELETE("/user/:id", handler.DeleteUser)
+	basePath := "/api/v1"
+	v1 := r.Group(basePath)
+	{
+		v1.GET("/users", handler.GetUsers)
+		v1.POST("/user", handler.CreateUser)
+		v1.GET("/user/email/:email", handler.FindUserByEmail)
+		v1.GET("/user/id/:id", handler.FindUserById)
+		v1.PATCH("/user/:id", handler.UpdateUser)
+		v1.DELETE("/user/:id", handler.DeleteUser)
+	}
 }
