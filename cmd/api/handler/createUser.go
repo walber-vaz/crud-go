@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/walber-vaz/crud-go/cmd/api/handler/request"
 	"github.com/walber-vaz/crud-go/cmd/api/handler/response"
-	"github.com/walber-vaz/crud-go/configs/rest_error"
+	"github.com/walber-vaz/crud-go/configs/validation"
 )
 
 func CreateUser(c *gin.Context) {
@@ -16,7 +16,7 @@ func CreateUser(c *gin.Context) {
 
 	if err := c.ShouldBindJSON(&userRequest); err != nil {
 		log.Printf("Error when trying to bind user request: %s", err.Error())
-		restErr := rest_error.NewBadRequestError("Some fields are not valid")
+		restErr := validation.ValidateUserError(err)
 
 		c.JSON(restErr.Code, restErr)
 		return
