@@ -17,6 +17,10 @@ var (
 	transl   ut.Translator
 )
 
+// init initializes the validator engine with the pt_BR translations.
+//
+// No parameters.
+// No return types.
 func init() {
 	if val, ok := binding.Validator.Engine().(*validator.Validate); ok {
 		pt_BR := pt_BR.New()
@@ -26,6 +30,9 @@ func init() {
 	}
 }
 
+// ValidateUserError validates the user error.
+//
+// It takes a validation_err error as a parameter and returns a *rest_error.RestError.
 func ValidateUserError(validation_err error) *rest_error.RestError {
 	var jsonErr *json.UnmarshalTypeError
 	var jsonValidationError validator.ValidationErrors
